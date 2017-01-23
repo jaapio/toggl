@@ -1,0 +1,92 @@
+{
+  "name": "jaapio/toggl",
+  "description": "Async first Toggl api client",
+  "type": "library",
+  "require": {
+    "api-clients/client-services": "dev-master",
+    "api-clients/foundation": "dev-master",
+    "api-clients/middleware-basic-authorization": "dev-master"
+  },
+  "require-dev": {
+    "api-clients/middleware-delay": "dev-master",
+    "api-clients/middleware-pool": "dev-master",
+    "api-clients/resource-generator": "dev-master",
+    "api-clients/test-utilities": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jaapio\\Toggl\\" : "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Jaapio\\Tests\\Toggl\\" : "tests"
+    }
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jaapio",
+      "email": "jaap@ijaap.nl"
+    }
+  ],
+  "extra": {
+    "api-clients": {
+      "command-bus": {
+        "path": "src/CommandBus",
+        "namespace": "Jaapio\\Toggl\\CommandBus"
+      }
+    }
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev",
+  "scripts": {
+    "ensure-installed": "composer install --ansi -n -q",
+    "cs": [
+      "@ensure-installed",
+      "phpcs --standard=PSR2 src/"
+    ],
+    "unit": [
+      "@ensure-installed",
+      "phpunit --colors=always -c phpunit.xml.dist"
+    ],
+    "unit-coverage": [
+      "@ensure-installed",
+      "phpunit --colors=always -c phpunit.xml.dist --coverage-text --coverage-html covHtml --coverage-clover ./build/logs/clover.xml"
+    ],
+    "lint-php": [
+      "@ensure-installed",
+      "parallel-lint --exclude vendor ."
+    ],
+    "qa-all": [
+      "@lint-php",
+      "@cs",
+      "@unit"
+    ],
+    "qa-all-coverage": [
+      "@lint-php",
+      "@cs",
+      "@unit-coverage"
+    ],
+    "qa-windows": [
+      "@lint-php",
+      "@cs",
+      "@unit"
+    ],
+    "qa-ci": [
+      "@qa-all"
+    ],
+    "qa-ci-coverage": [
+      "@qa-all-coverage"
+    ],
+    "qa-ci-windows": [
+      "@qa-windows"
+    ],
+    "qa-contrib": [
+      "@qa-all"
+    ],
+    "ci-coverage": [
+      "if [ -f ./build/logs/clover.xml ]; then wget https://scrutinizer-ci.com/ocular.phar && php ocular.phar code-coverage:upload --format=php-clover ./build/logs/clover.xml; fi"
+    ]
+  }
+}

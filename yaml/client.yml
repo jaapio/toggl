@@ -1,0 +1,9 @@
+class: Client
+properties:
+    id: int
+    name: string
+    wid: int
+    notes: string
+    at:
+        type: DateTimeInterface
+        wrap: DateTimeImmutable

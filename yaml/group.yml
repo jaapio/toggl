@@ -1,0 +1,8 @@
+class: Group
+properties:
+    id: int
+    name: string
+    wid: int
+    at:
+        type: DateTimeInterface
+        wrap: DateTimeImmutable

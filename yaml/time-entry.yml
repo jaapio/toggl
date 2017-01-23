@@ -1,0 +1,21 @@
+class: TimeEntry
+properties:
+    id: int
+    description: string
+    wid: int
+    pid: int
+    tid: int
+    billable: bool
+    start:
+        type: DateTimeInterface
+        wrap: DateTimeImmutable
+    stop:
+        type: DateTimeInterface
+        wrap: DateTimeImmutable
+    duration: int
+    created_with: string
+    tags: array
+    duronly: bool
+    at:
+        type: DateTimeInterface
+        wrap: DateTimeImmutable

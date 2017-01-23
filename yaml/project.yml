@@ -1,0 +1,19 @@
+class: Project
+properties:
+    id: int
+    name: string
+    wid: int
+    cid: int
+    active: bool
+    is_private: bool
+    template: bool
+    template_id: int
+    billable: bool
+    auto_estimates: bool
+    estimated_hours: int
+    at:
+    color: int
+    rate: float
+    at:
+        type: DateTimeInterface
+        wrap: DateTimeImmutable

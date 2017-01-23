@@ -1,0 +1,5 @@
+class: Tag
+properties:
+    id: int
+    name: string
+    wid: int

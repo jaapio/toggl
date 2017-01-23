@@ -1,0 +1,44 @@
+class: User
+properties:
+    id: int
+    api_token: string
+    default_wid: integer
+    email: string
+    fullname: string
+    jquery_timeofday_format: string
+    jquery_date_format: string
+    timeofday_format: string
+    date_format: string
+    store_start_and_stop_time: bool
+    beginning_of_week: int
+    language: string
+    image_url: string
+    sidebar_piechart: string
+    at:
+        type: DateTimeInterface
+        wrap: DateTimeImmutable
+    created_at:
+        type: DateTimeInterface
+        wrap: DateTimeImmutable
+    retention: int
+    record_timeline: bool
+    render_timeline: bool
+    timeline_enabled: bool
+    timeline_experiment: bool
+    new_blog_post:
+        type: BlogPost
+        annotations:
+            nested: BlogPost
+    should_upgrade: bool
+    achievements_enabled: bool
+    timezone: DateTimeZone
+    openid_enabled: bool
+    send_product_emails: bool
+    send_weekly_report: bool
+    send_timer_notifications: bool
+    last_blog_entry: string
+    invitation: array
+    workspaces:
+        type: array
+        annotations:
+            collection: Workspace

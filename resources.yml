@@ -1,0 +1,8 @@
+yaml_location: yaml                       # The location where the YAML files for the Resources are
+api_settings: Jaapio\Toggl\ApiSettings    # API Settings file location
+src:                                      # SRC
+  path: src/Resource                      # Path where the resources should be placed
+  namespace: Jaapio\Toggl\Resource        # The namespace for the resources
+tests:                                    # TESTS
+  path: tests/Resource                    # Path where the resources tests should be placed
+  namespace: Jaapio\Tests\Toggl\Resource  # The namespace for the tests

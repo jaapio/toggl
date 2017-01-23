@@ -1,0 +1,3 @@
+class: BlogPost
+properties:
+    id: int
