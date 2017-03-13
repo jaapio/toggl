@@ -5,13 +5,14 @@
   "require": {
     "api-clients/client-services": "dev-master",
     "api-clients/foundation": "dev-master",
-    "api-clients/middleware-basic-authorization": "dev-master"
+    "api-clients/middleware-basic-authorization": "^2.0",
+    "api-clients/middleware-user-agent": "^1.0"
   },
   "require-dev": {
-    "api-clients/middleware-delay": "dev-master",
-    "api-clients/middleware-pool": "dev-master",
+    "api-clients/middleware-delay": "^2.0",
+    "api-clients/middleware-pool": "^2.0",
     "api-clients/resource-generator": "dev-master",
-    "api-clients/test-utilities": "^2.0"
+    "api-clients/test-utilities": "^3.0.1"
   },
   "autoload": {
     "psr-4": {
